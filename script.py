@@ -20,9 +20,8 @@ categories = ["Helmet", "Chestplate", "Leggings", "Boots", "Dagger", "Wand", "Bo
 statToSortBy = "XP Bonus"
 
 for category in categories:
-# print("<===== " + category + " =====>")
-# category = "Ring"
-# Makes a curl call to the wynndata page and saves the output to a temporary text file
+    print("<===== " + category + " =====>")
+    # Makes a curl call to the wynndata page and saves the output to a temporary text file
     os.system("curl \"https://www.wynndata.tk/items/\" -X POST --data-raw \"search=&name=&category=type-" + category + "&tier=any&profession=any&min=1&max=130&order1=level&order2=xpBonus&order3=null&order4=null\" --output temp.txt")
     items = []
 
