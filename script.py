@@ -1,7 +1,5 @@
 import os
 from bs4 import BeautifulSoup
-from openpyxl import Workbook
-from datetime import datetime
 
 class Item:
     def __init__(self, name, rarity, lvlReq, statName, stat, statUnit, guaranteed, tradeable, link):
@@ -20,9 +18,6 @@ class Item:
     
 categories = ["Helmet", "Chestplate", "Leggings", "Boots", "Dagger", "Wand", "Bow", "Spear", "Relik", "Ring", "Bracelet", "Necklace"]
 statToSortBy = "XP Bonus"
-workbook = Workbook()
-sheet = workbook.active
-file_name = "Wynncraft: Optimal Items (" + statToSortBy + ") " + datetime.now().strftime('%Y.%m.%d - %H.%M.%S') + '.xlsx'
 
 for category in categories:
 # print("<===== " + category + " =====>")
